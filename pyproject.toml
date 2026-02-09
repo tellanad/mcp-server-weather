@@ -1,0 +1,14 @@
+[project]
+name = "weather-mcp"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["mcp[cli]", "httpx"]
+
+[tool.uv]
+package = true
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
