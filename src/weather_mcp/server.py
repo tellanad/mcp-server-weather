@@ -22,7 +22,7 @@ async def location(query: str, count: int = 5):
     return await get_location(query, count)
 
 if __name__ == "__main__":
-    transport = os.getenv("MCP_TRANSPORT", "http")   # "http" for Docker, "stdio" for Claude Desktop
+    transport = os.getenv("MCP_TRANSPORT", "http")   # "http" for Docker, "stdio" for ClaudeDesktop
     host = os.getenv("MCP_HOST", "0.0.0.0")
     port = int(os.getenv("MCP_PORT", "8000"))
     mcp.run(transport=transport, host=host, port=port)
